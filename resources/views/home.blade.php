@@ -27,18 +27,20 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Trenitalia</td>
-        <td>Stazione notarbartolo</td>
-        <td>stazione centrale</td>
-        <td>10:30</td>
-        <td>12:30</td>
-        <td>961273</td>
-        <td>17</td>
-        <td>Mai</td>
-        <td>può essere</td>
-      </tr>
+      @foreach ($trains as $train)
+        <tr>
+          <th scope="row">{{ $train['id'] }}</th>
+          <td>{{ $train['company'] }}</td>
+          <td>{{ $train['departure_station'] }}</td>
+          <td>{{ $train['arrival_station'] }}</td>
+          <td>{{ $train['departure_time'] }}</td>
+          <td>{{ $train['arrival_time'] }}</td>
+          <td>{{ $train['train_code'] }}</td>
+          <td>{{ $train['carriages_number'] }}</td>
+          <td>{{ $train['in_time'] }}</td>
+          <td>{{ $train['is_cancelled'] }}</td>
+        </tr>
+      @endforeach
     </tbody>
   </table>
 @endsection
