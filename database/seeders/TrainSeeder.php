@@ -22,8 +22,8 @@ class TrainSeeder extends Seeder
             $new_train->arrival_station = $faker->words(2, true);
             $new_train->departure_time = $faker->time();
             $new_train->arrival_time = $faker->time();
-            $new_train->train_code = $faker->randomNumber(5, false);
-            $new_train->carriages_number = $faker->randomNumber(3, false);
+            $new_train->train_code = $faker->numberBetween(0, 65535);
+            $new_train->carriages_number = $faker->numberBetween(0, 255);
             $new_train->in_time = $faker->boolean();
             $new_train->is_cancelled = $faker->boolean();
 
