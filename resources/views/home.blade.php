@@ -8,3 +8,8 @@
 
 {{-- changing title --}}
 @section('title', 'Home')
+
+{{-- main content --}}
+@section('content')
+
+@endsection

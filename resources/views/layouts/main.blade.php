@@ -20,6 +20,10 @@
     @include('includes.header')
   </header>
 
+  <main class="container my-3">
+    @yield('content')
+  </main>
+
 </body>
 
 </html>
