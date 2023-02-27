@@ -16,6 +16,9 @@
 </head>
 
 <body>
+  <header>
+    @include('includes.header')
+  </header>
 
 </body>
 
